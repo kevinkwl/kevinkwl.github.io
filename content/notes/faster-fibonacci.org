@@ -1,0 +1,136 @@
+#+TITLE: A log(n) Algorithm for Fibonacci Numbers
+#+AUTHOR: Kevin Ling
+#+DATE: 2016-09-21
+#+TAGS: Algorithm Fibonacci
+#+DESCRIPTION: A simple algorithm
+
+* Explanation
+This algorithm is an exercise in the book *Structure
+and Interpretation of Computer Programs* (1.19).
+
+** Original method
+
+The usual way of computing the fibonacci number is by using the
+definition of fibonacci numbers:
+\[
+f(0) = 0,
+f(1) = 1,
+f(n) = f(n-1) + f(n-2)
+\]
+It's trivial to write a recursive procedure to calculate fibonacci
+numbers, but the cost grows exponentially. Using memorization
+techniques and dynamic programming, we can achieve a linear time
+complexity. Well, that's not so fast.
+
+** Logarithmic approach
+When we are calculating the exponentiation of a number, instead of
+multiplying the number cumulatively, firstly we calculate with half of
+the exponent recursively, then square the result to get the final
+answer.
+
+We can use the same method to optimize the procedure to compute
+fibonacci numbers.
+
+Let $a$ and $b$ be the two state variables in the fibonacci procedure,
+initially $a = fib(1) = 1, b = fib(0) = 0$. By definition, at each
+iteration, they are updated simultaneously as follows:
+\[
+a \leftarrow a + b
+\]
+\[
+b \rightarrow a
+\]
+Call this transformation $T$, by applying $T$ on $a,b$ n times, we'll
+get $Fib(n+1), Fib(n)$. Consider $T$ to be a special case of
+transformation family of $T_{pq}$ with $p = 0, q = 1$, where $T_{pq}$ is defined as:
+\[
+a \leftarrow bq + aq + ap
+\]
+\[
+b \leftarrow bp + aq
+\]
+By applying $T_{pq}$ twice,
+\[
+a \leftarrow b(2pq+q^2) + a(2pq+q^2) + a(p^2+q^2)
+\]
+\[
+b \leftarrow b(p^2+q^2) + a(2pq+q^2)
+\]
+Note that this transformation also conforms to the form of $T_{pq}$,
+call it $T_{p'q'}$, where $p' = p^2 + q^2, q' = (2pq + q^2)$.
+
+Everytime we calculate the new transformation $T_{p'q'}$ according to
+the previous one, we halve the number of iterations needed to
+performed to get the answer. In this manner, we get the answer in
+logarithmic steps.
+
+There are methods that using matrix multiplication, as the fibonacci
+definition can be written in matrix form:
+\begin{equation*}
+\begin{bmatrix}
+a \\
+b
+\end{bmatrix}
+\leftarrow
+\begin{bmatrix}
+1 & 1 \\
+1 & 0
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+a \\
+b
+\end{bmatrix}
+\end{equation*}
+This method is fine, but matrix multiplication seems to be a little
+bit tedious.
+* Implementation
+In scheme
+#+BEGIN_SRC scheme
+(define (square x) (* x x))
+(define (even? n) (= (remainder n 2) 0))
+
+(define (fib n)
+  (fib-iter 1 0 0 1 n))
+(define (fib-iter a b p q count)
+  (cond ((= count 0) b)
+        ((even? count)
+         (fib-iter a
+                   b
+                   (+ (square p) (square q))
+                   (+ (square q) (* 2 p q))
+                   (/ count 2)))
+        (else (fib-iter (+ (* b q) (* a q) (* a p))
+                        (+ (* b p) (* a q))
+                        p
+                        q
+                        (- count 1)))))
+#+END_SRC
+In c++
+#+BEGIN_SRC cpp
+long long faster_fibonacci(int n)
+{
+  int count = n;
+  long long a = 1, b = 0, p = 0, q = 1;
+  long long new_p = 0, new_q = 1;
+  long long new_a, new_b;
+  while (count != 0) {
+    if (count % 2 == 0) {
+      new_p = p*p + q*q;
+      new_q = 2*p*q + q*q;
+      count /= 2;
+
+      p = new_p;
+      q = new_q;
+    } else {
+      new_a = b*q + a*q + a*p;
+      new_b = b*p + a*q;
+      count -= 1;
+
+      a = new_a;
+      b = new_b;
+    }
+  }
+  return b;
+}
+#+END_SRC

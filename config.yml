@@ -1,0 +1,41 @@
+---
+baseURL: "http://lingkangwei.me/"
+disablePathToLower: true
+languageCode: en-us
+title: "Wind's Howling"
+pluralizelisttitles: "false"
+footnoteReturnLinkContents: "^"
+
+params:
+  description: "Coder, Reader, Runner. Essays, Blog. China."
+  author: 
+    name: Kevin Ling
+    email: lingkangwei.kevin@gmail.com
+  Urlimg: "assets/img/"
+  disqus: "winds-howling"
+  copyright: "Kevin Ling, kevinkwl"
+  github: "kevinkwl"
+  top: ""
+
+# include this sections in writing index.
+  indexInclude:
+    - essays
+    - misc
+    - notes
+
+taxonomies:
+  tag: "tags"
+
+ignoreFiles:
+  - /_output
+  - /_public
+  - /_img
+  - /_less
+  - /.git
+
+MetaDataFormat: "yaml"
+
+blackfriday:
+  plainIDAnchors: true
+  extensions:
+  - hardLineBreak

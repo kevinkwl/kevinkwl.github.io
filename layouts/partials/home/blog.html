@@ -1,0 +1,16 @@
+<section data-anchor="blog" class="section blog-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h1>Writings</h1>
+        <p>Here you can find the latest posts of mine.</p>
+        {{ range first 5 ( where (where .Site.Pages "Kind" "page") "Section" "in" .Site.Params.IndexInclude ) }}
+            <h5><a href="{{ .RelPermalink }}">{{ .Title }}</a></h5>
+        {{ end }}
+        <p><br/></p>
+        <p><a href="/writing/" class="box">Read more</a></p>
+        <p><br/></p>
+      </div>
+    </div>
+  </div>
+</section>

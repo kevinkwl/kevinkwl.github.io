@@ -1,0 +1,22 @@
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol vocab="http://schema.org/" typeof="BreadcrumbList" class="breadcrumb">
+            <li property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" href="/">
+                <span property="name">Home</span>
+              </a>
+              <meta property="position" content="1">
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" href="/{{ lower .Section | urlize }}/">
+                <span property="name">{{ .Section | humanize | title | markdownify }}</span>
+              </a>
+              <meta property="position" content="2">
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" href="{{ .RelPermalink }}">
+                <span property="name">{{ .Title | markdownify }}</span>
+              </a>
+              <meta property="position" content="3">
+            </li>
+          </ol>
+        </div>

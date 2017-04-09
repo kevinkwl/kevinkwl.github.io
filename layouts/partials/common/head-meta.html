@@ -1,0 +1,36 @@
+<!-- Meta Description -->
+  {{ if .IsHome }}
+    <meta name="description" content="{{ .Site.Params.description | markdownify }}" />
+  {{ else if .IsNode }}
+    {{ if eq .Data.Singular "tag" }}
+      <meta name="description" content="All posts tagged “{{ .Title | markdownify}}”" />
+    {{ else if eq .Title "404 Page not found" }}
+      <meta name="description" content="{{ .Title | markdownify}}" />
+    {{ else }}
+      {{ $section := ( .Title | humanize | title ) }}
+      {{ range $.Site.Data.section }}
+        {{ if eq $section .name }}
+          {{ if .seo_description }}
+            <meta name="description" content="{{ .seo_description | markdownify }}" />
+          {{ else }}
+            <meta name="description" content="{{ .description | markdownify }}" />
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else if .IsPage }}
+    {{ if eq .Layout "tag-list" }}
+      <meta name="description" content="A list of all tags" />
+    {{ else }}
+      {{ if .Params.seo_description }}
+        <meta name="description" content="{{ .Params.seo_description | markdownify }}" />
+      {{ else }}
+        <meta name="description" content="{{ .Description | markdownify }}" />
+      {{ end }}
+
+<!-- Meta keywords -->
+      {{ if .Params.tags }}
+        <meta name="keywords" content="{{ range .Params.tags }}{{ . }},{{ end }}" />
+      {{ end }}
+    {{ end }}
+  {{ end }}
