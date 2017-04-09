@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wind&#39;S Howling on Wind&#39;s Howling</title>
+    <link>http://lingkangwei.me/</link>
+    <description>Recent content in Wind&#39;S Howling on Wind&#39;s Howling</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>lingkangwei.kevin@gmail.com (Kevin Ling)</managingEditor>
+    <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
+    <copyright>Kevin Ling, kevinkwl</copyright>
+    <lastBuildDate>Mon, 03 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title> Le roi est mort, vive le roi!</title>
+      <link>http://lingkangwei.me/essays/Wind-s-Howling/</link>
+      <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/essays/Wind-s-Howling/</guid>
+      <description>I embarked on a new journey</description>
+    </item>
+    
+    <item>
+      <title>placeholder</title>
+      <link>http://lingkangwei.me/essays/why/</link>
+      <pubDate>Fri, 31 Mar 2017 13:54:51 +0800</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/essays/why/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test File For chaseadamsio/goorgeous</title>
+      <link>http://lingkangwei.me/misc/test/</link>
+      <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/misc/test/</guid>
+      <description>Just another golang parser for org content!</description>
+    </item>
+    
+    <item>
+      <title>Keep process running via Screen</title>
+      <link>http://lingkangwei.me/notes/linux-screen/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/notes/linux-screen/</guid>
+      <description>screen</description>
+    </item>
+    
+    <item>
+      <title>A log(n) Algorithm for Fibonacci Numbers</title>
+      <link>http://lingkangwei.me/notes/faster-fibonacci/</link>
+      <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/notes/faster-fibonacci/</guid>
+      <description>A simple algorithm</description>
+    </item>
+    
+  </channel>
+</rss>
