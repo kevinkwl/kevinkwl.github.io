@@ -28,7 +28,7 @@
     <a class="readmore" href="{{ .URL }}">Read more...</a>
     <ul class="all-tags">
       {{ range .Params.tags }}
-      <li><a class="tag" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">{{ . }}</a></li>
+      <li><a class="tag" href="{{ $.Site.BaseURL }}tags/{{ lower . | urlize }}/">{{ . }}</a></li>
       {{ end }}
     </ul>
   </div>
