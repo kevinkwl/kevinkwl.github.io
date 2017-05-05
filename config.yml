@@ -1,5 +1,5 @@
 ---
-baseURL: "http://lingkangwei.me/"
+baseURL: "http://kevinkwl.me/"
 disablePathToLower: true
 languageCode: en-us
 title: "Wind's Howling"
@@ -41,6 +41,7 @@ ignoreFiles:
   - /_less
   - /.git
   - /_styl
+  - README.org
 
 MetaDataFormat: "yaml"
 

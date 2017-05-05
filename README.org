@@ -1,0 +1,24 @@
+#+TITLE: Kevin Ling's  Website
+#+AUTHOR: kevinkwl
+
+This is the source for http://kevinkwl.me. I use [[http://gohugo.io][Hugo]] static website generator
+to generate the website.The design is inspired by [[https://medium.com][Medium]].
+
+* Copyright and License
+The following files and directories including their contents are Copyright Kevin
+Ling. You may not reuse anything therein without my permission:
+#+BEGIN_SRC text
+content/
+#+END_SRC
+
+Unless otherwise specified (in the pages that references the images), most
+images in the following directory are taken from [[https://unsplash.com/][Unsplash]], other free CC0
+sources, and taken by myself, which I release under CC0 license. 
+#+BEGIN_SRC text
+static/assets/img
+#+END_SRC
+All other directories and files and MIT Licensed. Feel free to use and modify
+the source codes for your own use. If you do use them, a link back to
+kevinkwl.me would be appreciated, but is not required.
+
+ [[file:LICENSE][MIT License]]
