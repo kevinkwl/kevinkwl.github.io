@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Wind&#39;s Howling</title>
-    <link>http://lingkangwei.me/tags/linux/</link>
+    <link>http://lingkangwei.me/tags/Linux/</link>
     <description>Recent content in Linux on Wind&#39;s Howling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,15 +10,18 @@
     <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
     <copyright>Kevin Ling, kevinkwl</copyright>
     <lastBuildDate>Sat, 19 Nov 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/linux/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://lingkangwei.me/tags/Linux/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Keep process running via Screen</title>
-      <link>http://lingkangwei.me/notes/linux-screen/</link>
+      <link>http://lingkangwei.me/writing/linux-screen/</link>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
       <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://lingkangwei.me/notes/linux-screen/</guid>
-      <description>screen</description>
+      <guid>http://lingkangwei.me/writing/linux-screen/</guid>
+      <description>Recently I&#39;ve been trying to train a neural network for machine translation (nematus) using the linux machine of the laboratory via ssh shell. But it keeps annoying me that each time I close the ssh connection, the training process terminates. As the training process is initiated from ssh shell, it is a child process that will be terminates when the parent process terminates (I exit the ssh shell).
+The recommended way is to use screen, which it can create processes in different process groups, thereby keep the processes running even if you disconnect from ssh session.</description>
     </item>
     
   </channel>

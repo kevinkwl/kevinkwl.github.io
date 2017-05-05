@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Wind&#39;s Howling</title>
+    <link>http://lingkangwei.me/category/Notes/</link>
+    <description>Recent content in Notes on Wind&#39;s Howling</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>lingkangwei.kevin@gmail.com (Kevin Ling)</managingEditor>
+    <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
+    <copyright>Kevin Ling, kevinkwl</copyright>
+    <lastBuildDate>Sat, 19 Nov 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://lingkangwei.me/category/Notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Keep process running via Screen</title>
+      <link>http://lingkangwei.me/writing/linux-screen/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/writing/linux-screen/</guid>
+      <description>Recently I&#39;ve been trying to train a neural network for machine translation (nematus) using the linux machine of the laboratory via ssh shell. But it keeps annoying me that each time I close the ssh connection, the training process terminates. As the training process is initiated from ssh shell, it is a child process that will be terminates when the parent process terminates (I exit the ssh shell).
+The recommended way is to use screen, which it can create processes in different process groups, thereby keep the processes running even if you disconnect from ssh session.</description>
+    </item>
+    
+    <item>
+      <title>A log(n) Algorithm for Fibonacci Numbers</title>
+      <link>http://lingkangwei.me/writing/faster-fibonacci/</link>
+      <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/writing/faster-fibonacci/</guid>
+      <description>Explanation This algorithm is an exercise in the book Structure and Interpretation of Computer Programs (1.19).
+Original method The usual way of computing the fibonacci number is by using the definition of fibonacci numbers: \[ f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2) \] It&#39;s trivial to write a recursive procedure to calculate fibonacci numbers, but the cost grows exponentially. Using memorization techniques and dynamic programming, we can achieve a linear time complexity.</description>
+    </item>
+    
+  </channel>
+</rss>

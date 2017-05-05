@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Wind&#39;s Howling  | A log(n) Algorithm for Fibonacci Numbers</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+     <meta name="generator" content="Hugo 0.21-DEV" />
+      
+      
+        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+      
+
+     <link href='http://lingkangwei.me/assets/css/style.css' rel='stylesheet' type="text/css" />
+     <link href='http://lingkangwei.me/assets/css/prism.css' rel='stylesheet' type="text/css" />  
+     
+     
+
+     
+
+      <meta property="og:title" content="A log(n) Algorithm for Fibonacci Numbers" />
+<meta property="og:description" content="A simple algorithm" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://lingkangwei.me/writing/faster-fibonacci/" />
+
+
+
+<meta property="article:published_time" content="2016-09-21T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-09-21T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="A log(n) Algorithm for Fibonacci Numbers">
+<meta itemprop="description" content="A simple algorithm">
+
+
+<meta itemprop="dateModified" content="2016-09-21T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="545">
+
+
+
+<meta itemprop="keywords" content="Misc,Notes,Ramblings,Algorithm,Fibonacci,Hugo,Life,Linux,Writing,orgmode," />
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="A log(n) Algorithm for Fibonacci Numbers"/>
+<meta name="twitter:title" content="A log(n) Algorithm for Fibonacci Numbers"/>
+<meta name="twitter:description" content="A simple algorithm"/>
+
+
+
+
+  </head>
+
+  <body class="">
+    <div id="nav-wrapper">
+<nav class="navbar" role="navigation">
+  <div class="left">
+    <a href="http://lingkangwei.me/">Wind&#39;s Howling</a>
+  </div>
+
+  <div class="right">
+    <ul>
+      <li>
+        <a class="link" href="http://lingkangwei.me/writing">Writings</a>
+      </li>
+      <li>
+        <a class="link" href="http://lingkangwei.me/tags">Tags</a>
+      </li>
+      <li>
+        <a class="link" href="http://lingkangwei.me/about">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+    
+
+    <main role="main" >
+      
+<div class="post-wrapper">
+  <div class="container">
+    <article>
+      <div class="post-meta">
+        <span class="post-category">
+          
+            <a class="category" href="http://lingkangwei.me/category/Notes/">Notes</a>
+          
+        </span>
+      </div>
+      <h1 class="title">
+        A log(n) Algorithm for Fibonacci Numbers
+      </h1>
+      <div class="post-meta">
+        <span class="post-date">
+          21 Sep, 2016
+        </span>
+        &bullet;
+        <span class="read-time">
+          3 min read
+        </span>
+      </div>
+      
+      <section class="content">
+        <h1 id="explanation">Explanation</h1>
+
+<p>This algorithm is an exercise in the book <strong>Structure
+and Interpretation of Computer Programs</strong> (1.19).</p>
+
+<h2 id="original-method">Original method</h2>
+
+<p>The usual way of computing the fibonacci number is by using the
+definition of fibonacci numbers:
+\[
+f(0) = 0,
+f(1) = 1,
+f(n) = f(n-1) + f(n-2)
+\]
+It's trivial to write a recursive procedure to calculate fibonacci
+numbers, but the cost grows exponentially. Using memorization
+techniques and dynamic programming, we can achieve a linear time
+complexity. Well, that's not so fast.</p>
+
+<h2 id="logarithmic-approach">Logarithmic approach</h2>
+
+<p>When we are calculating the exponentiation of a number, instead of
+multiplying the number cumulatively, firstly we calculate with half of
+the exponent recursively, then square the result to get the final
+answer.</p>
+
+<p>We can use the same method to optimize the procedure to compute
+fibonacci numbers.</p>
+
+<p>Let \(a\) and \(b\) be the two state variables in the fibonacci procedure,
+initially \(a = fib(1) = 1, b = fib(0) = 0\). By definition, at each
+iteration, they are updated simultaneously as follows:
+\[
+a \leftarrow a + b
+\]
+\[
+b \rightarrow a
+\]
+Call this transformation \(T\), by applying \(T\) on \(a,b\) n times, we'll
+get \(Fib(n+1), Fib(n)\). Consider \(T\) to be a special case of
+transformation family of \(T_{pq}\) with \(p = 0, q = 1\), where \(T_{pq}\) is defined as:
+\[
+a \leftarrow bq + aq + ap
+\]
+\[
+b \leftarrow bp + aq
+\]
+By applying \(T_{pq}\) twice,
+\[
+a \leftarrow b(2pq+q^2) + a(2pq+q^2) + a(p^2+q^2)
+\]
+\[
+b \leftarrow b(p^2+q^2) + a(2pq+q^2)
+\]
+Note that this transformation also conforms to the form of \(T_{pq}\),
+call it \(T_{p'q'}\), where \(p' = p^2 + q^2, q' = (2pq + q^2)\).</p>
+
+<p>Everytime we calculate the new transformation \(T_{p'q'}\) according to
+the previous one, we halve the number of iterations needed to
+performed to get the answer. In this manner, we get the answer in
+logarithmic steps.</p>
+
+<h1 id="implementation">Implementation</h1>
+
+<p>There are methods that using matrix multiplication, as the fibonacci
+definition can be written in matrix form:
+\begin{equation*}
+\begin{bmatrix}
+a \\
+b
+\end{bmatrix}
+\leftarrow
+\begin{bmatrix}
+1 & 1 \\
+1 & 0
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+a \\
+b
+\end{bmatrix}
+\end{equation*}
+This method is fine, but matrix multiplication seems to be a little
+bit tedious.
+In scheme</p>
+
+<pre><code class="language-scheme">
+(define (square x) (* x x))
+(define (even? n) (= (remainder n 2) 0))
+
+(define (fib n)
+  (fib-iter 1 0 0 1 n))
+(define (fib-iter a b p q count)
+  (cond ((= count 0) b)
+        ((even? count)
+         (fib-iter a
+                   b
+                   (+ (square p) (square q))
+                   (+ (square q) (* 2 p q))
+                   (/ count 2)))
+        (else (fib-iter (+ (* b q) (* a q) (* a p))
+                        (+ (* b p) (* a q))
+                        p
+                        q
+                        (- count 1)))))
+</code></pre>
+
+<p>In c++</p>
+
+<pre><code class="language-cpp">
+long long faster_fibonacci(int n)
+{
+  int count = n;
+  long long a = 1, b = 0, p = 0, q = 1;
+  long long new_p = 0, new_q = 1;
+  long long new_a, new_b;
+  while (count != 0) {
+    if (count % 2 == 0) {
+      new_p = p*p + q*q;
+      new_q = 2*p*q + q*q;
+      count /= 2;
+
+      p = new_p;
+      q = new_q;
+    } else {
+      new_a = b*q + a*q + a*p;
+      new_b = b*p + a*q;
+      count -= 1;
+
+      a = new_a;
+      b = new_b;
+    }
+  }
+  return b;
+}
+</code></pre>
+
+      </section>
+      <div class="after-post-meta">
+      <ul class="all-tags">
+        
+        <li>
+        <a class="tag" href="http://lingkangwei.me/tags/Algorithm/">Algorithm</a>
+        </li>
+        
+        <li>
+        <a class="tag" href="http://lingkangwei.me/tags/Fibonacci/">Fibonacci</a>
+        </li>
+        
+      </div>
+      </div>
+    </article>
+    <div class="ph3 mt2 mt6-ns">
+      <div class="related">
+  <h4 class="relatedPost">You may also like...</h4>
+  <ul class="relatedPosts">
+    
+      <li class="relatedPost">
+        <a href="/writing/test/">Test File For chaseadamsio/goorgeous</a><br />
+        <span class="description">Just another golang parser for org content!</span>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+    <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+        this.page.url = "http:\/\/lingkangwei.me\/writing\/faster-fibonacci\/";
+        this.page.identifier = "http:\/\/lingkangwei.me\/writing\/faster-fibonacci\/";
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = '//winds-howling.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+  </div>
+</div>
+
+    </main>
+    <footer class="bg-white boxShadowTop" role="contentinfo">
+  <div class="footer-social">
+  <div class="social">
+  <a class="icon-wrapper" href="https://github.com/">
+    <div>
+      <svg class="social" viewBox="0 0 64 64">
+        <use class="use-icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#github-icon"></use>
+        <use class="use-mask" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#github-mask"></use>
+      </svg>
+    </div>
+  </a>
+  <a class="icon-wrapper" href="https://linkedin.com/in/">
+    <div>
+      <svg class="social" viewBox="0 0 64 64">
+        <use class="use-icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#linkedin-icon"></use>
+        <use class="use-mask" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#linkedin-mask"></use>
+      </svg>
+    </div>
+  </a>
+  <a class="icon-wrapper" href="mailto:lingkangwei.kevin@gmail.com">
+    <div>
+      <svg class="social" viewBox="0 0 64 64">
+        <use class="use-icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#email-icon"></use>
+        <use class="use-mask" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#email-mask"></use>
+      </svg>
+    </div>
+  </a>
+</div>
+
+  </div>
+  <div class="copyright">
+  <span>
+    Copyright &copy; 2017 Kevin Ling, kevinkwl
+  </span>
+  </div>
+</footer>
+
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+
+<script src="/assets/js/prism.js"></script>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98612858-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+  </body>
+</html>

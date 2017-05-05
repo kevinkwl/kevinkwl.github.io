@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Wind&#39;s Howling  | Keep process running via Screen</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+     <meta name="generator" content="Hugo 0.21-DEV" />
+      
+      
+        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+      
+
+     <link href='http://lingkangwei.me/assets/css/style.css' rel='stylesheet' type="text/css" />
+     <link href='http://lingkangwei.me/assets/css/prism.css' rel='stylesheet' type="text/css" />  
+     
+     
+
+     
+
+      <meta property="og:title" content="Keep process running via Screen" />
+<meta property="og:description" content="screen" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://lingkangwei.me/writing/linux-screen/" />
+
+
+
+<meta property="article:published_time" content="2016-11-19T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-11-19T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Keep process running via Screen">
+<meta itemprop="description" content="screen">
+
+
+<meta itemprop="dateModified" content="2016-11-19T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="292">
+
+
+
+<meta itemprop="keywords" content="Misc,Notes,Ramblings,Algorithm,Fibonacci,Hugo,Life,Linux,Writing,orgmode," />
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Keep process running via Screen"/>
+<meta name="twitter:title" content="Keep process running via Screen"/>
+<meta name="twitter:description" content="screen"/>
+
+
+
+
+  </head>
+
+  <body class="">
+    <div id="nav-wrapper">
+<nav class="navbar" role="navigation">
+  <div class="left">
+    <a href="http://lingkangwei.me/">Wind&#39;s Howling</a>
+  </div>
+
+  <div class="right">
+    <ul>
+      <li>
+        <a class="link" href="http://lingkangwei.me/writing">Writings</a>
+      </li>
+      <li>
+        <a class="link" href="http://lingkangwei.me/tags">Tags</a>
+      </li>
+      <li>
+        <a class="link" href="http://lingkangwei.me/about">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+    
+
+    <main role="main" >
+      
+<div class="post-wrapper">
+  <div class="container">
+    <article>
+      <div class="post-meta">
+        <span class="post-category">
+          
+            <a class="category" href="http://lingkangwei.me/category/Notes/">Notes</a>
+          
+        </span>
+      </div>
+      <h1 class="title">
+        Keep process running via Screen
+      </h1>
+      <div class="post-meta">
+        <span class="post-date">
+          19 Nov, 2016
+        </span>
+        &bullet;
+        <span class="read-time">
+          2 min read
+        </span>
+      </div>
+      
+      <section class="content">
+        <p>Recently I've been trying to train a neural network for machine translation
+(<a href="https:github.com/rsennrich/nematus" title="nematus">nematus</a>) using the linux machine of the laboratory via ssh shell. But it keeps
+annoying me that each time I close the ssh connection, the training process
+terminates. As the training process is initiated from ssh shell, it is a child
+process that will be terminates when the parent process terminates (I exit the
+ssh shell).</p>
+
+<p>The recommended way is to use <code>screen</code>, which it can create processes in
+different process groups, thereby keep the processes running even if you
+disconnect from ssh session.</p>
+
+<h1 id="installation">Installation</h1>
+
+<p>On Ubuntu:</p>
+
+<pre><code class="language-bash">
+sudo apt-get install screen
+</code></pre>
+
+<p>will install <code>screen</code>. Other Linux distributions can use their package managers
+instead.</p>
+
+<h1 id="simple-usage">Simple usage</h1>
+
+<p>On normal shell session, <code>~$screen</code> will open up the Screen Manager, then press
+the key <code>SPACE</code> or <code>RETURN</code> will start a screen window. A screen window is just
+like a shell, however, you can attach or detach to it without killing the
+session.</p>
+
+<p>In a screen window, type the usual command to start the process, then <code>C-a d=
+(=C</code> stands for Control Key) will detach you from the current screen window session (send you back to the
+original shell).</p>
+
+<p>The command <code>$screen -ls</code> can list all screen windows, and use <code>$screen -r
+name-of-window</code> to reattach to that window, e.g.:</p>
+
+<pre><code class="language-bash">
+$ screen -ls
+There are screens on:
+	835.pts-22.mercury	(11/19/16 19:15:27)	(Detached)
+	11375.pts-22.mercury	(11/19/16 16:32:05)	(Detached)
+2 Sockets in /var/run/screen/S-linkw.
+
+$ screen -r 835.pts-22.mercury
+</code></pre>
+
+<p>To kill a screen session, just hit <code>C-a k</code>, or <code>C-a</code> then enter <code>:quit</code> if you
+are in an attached window. Also,</p>
+
+<pre><code class="language-bash">
+$ screen -X -S [session # you want to kill] quit
+</code></pre>
+
+<p>works.</p>
+
+<p>For more usages, use <code>$man screen</code> to see man page. A full manual can be found
+at <a href="https://www.gnu.org/software/screen/manual/" title="GNU Screen">GNU Screen</a>.</p>
+
+      </section>
+      <div class="after-post-meta">
+      <ul class="all-tags">
+        
+        <li>
+        <a class="tag" href="http://lingkangwei.me/tags/Linux/">Linux</a>
+        </li>
+        
+      </div>
+      </div>
+    </article>
+    <div class="ph3 mt2 mt6-ns">
+      <div class="related">
+  <h4 class="relatedPost">You may also like...</h4>
+  <ul class="relatedPosts">
+    
+  </ul>
+</div>
+
+    </div>
+    <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+        this.page.url = "http:\/\/lingkangwei.me\/writing\/linux-screen\/";
+        this.page.identifier = "http:\/\/lingkangwei.me\/writing\/linux-screen\/";
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = '//winds-howling.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+  </div>
+</div>
+
+    </main>
+    <footer class="bg-white boxShadowTop" role="contentinfo">
+  <div class="footer-social">
+  <div class="social">
+  <a class="icon-wrapper" href="https://github.com/">
+    <div>
+      <svg class="social" viewBox="0 0 64 64">
+        <use class="use-icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#github-icon"></use>
+        <use class="use-mask" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#github-mask"></use>
+      </svg>
+    </div>
+  </a>
+  <a class="icon-wrapper" href="https://linkedin.com/in/">
+    <div>
+      <svg class="social" viewBox="0 0 64 64">
+        <use class="use-icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#linkedin-icon"></use>
+        <use class="use-mask" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#linkedin-mask"></use>
+      </svg>
+    </div>
+  </a>
+  <a class="icon-wrapper" href="mailto:lingkangwei.kevin@gmail.com">
+    <div>
+      <svg class="social" viewBox="0 0 64 64">
+        <use class="use-icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#email-icon"></use>
+        <use class="use-mask" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-accounts.svg#email-mask"></use>
+      </svg>
+    </div>
+  </a>
+</div>
+
+  </div>
+  <div class="copyright">
+  <span>
+    Copyright &copy; 2017 Kevin Ling, kevinkwl
+  </span>
+  </div>
+</footer>
+
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+
+<script src="/assets/js/prism.js"></script>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98612858-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+  </body>
+</html>

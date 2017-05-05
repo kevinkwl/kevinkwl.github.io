@@ -2,23 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Algorithm on Wind&#39;s Howling</title>
-    <link>http://lingkangwei.me/tags/algorithm/</link>
+    <link>http://lingkangwei.me/tags/Algorithm/</link>
     <description>Recent content in Algorithm on Wind&#39;s Howling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>lingkangwei.kevin@gmail.com (Kevin Ling)</managingEditor>
     <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
     <copyright>Kevin Ling, kevinkwl</copyright>
-    <lastBuildDate>Wed, 21 Sep 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/algorithm/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://lingkangwei.me/tags/Algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test File For chaseadamsio/goorgeous</title>
+      <link>http://lingkangwei.me/writing/test/</link>
+      <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/writing/test/</guid>
+      <description>Have you ever wanted to parse org content with Go? Well now you can!
+It doesn&#39;t matter if you want to use an emphasis, bold, verbatim, code or strikethrough, they&#39;re all supported!
+If you&#39;re curious what else it supports, you&#39;re in luck, you can find it all here (did I mention plain links work?)!
+  this is a picture for gopher gopher    Headline 1 Headline 2 Headline 3 Headline 4 Headline 5 Headline 6  TODO Headline 1 DONE Headline 1 TODO Headline 2 DONE Headline 2 TODO Headline 3 DONE Headline 3 TODO Headline 4 DONE Headline 4 TODO Headline 5 DONE Headline 5 TODO Headline 6 DONE Headline 6 [A] Headline 1 [A] Headline 2 [A] Headline 3 [A] Headline 4 [A] Headline 5 [A] Headline 6 TODO [A] Headline 1 TODO [A] Headline 2 TODO [A] Headline 3 TODO [A] Headline 4 TODO [A] Headline 5 TODO [A] Headline 6 Headline 1 tags are supported  Headline 2 tags are supported  Headline 3 tags are supported  Headline 4 tags are supported  Headline 5 tags are supported  Headline 6 tags are supported  TODO [A] Headline 1 tags are supported  TODO [A] Headline 2 tags are supported  TODO [A] Headline 3 tags are supported  TODO [A] Headline 4 tags are supported  TODO [A] Headline 5 tags are supported  TODO [A] Headline 6 tags are supported  elements  unordered 1 2 lists are supported.</description>
+    </item>
     
     <item>
       <title>A log(n) Algorithm for Fibonacci Numbers</title>
-      <link>http://lingkangwei.me/notes/faster-fibonacci/</link>
+      <link>http://lingkangwei.me/writing/faster-fibonacci/</link>
       <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
       <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://lingkangwei.me/notes/faster-fibonacci/</guid>
-      <description>A simple algorithm</description>
+      <guid>http://lingkangwei.me/writing/faster-fibonacci/</guid>
+      <description>Explanation This algorithm is an exercise in the book Structure and Interpretation of Computer Programs (1.19).
+Original method The usual way of computing the fibonacci number is by using the definition of fibonacci numbers: \[ f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2) \] It&#39;s trivial to write a recursive procedure to calculate fibonacci numbers, but the cost grows exponentially. Using memorization techniques and dynamic programming, we can achieve a linear time complexity.</description>
     </item>
     
   </channel>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fibonacci on Wind&#39;s Howling</title>
-    <link>http://lingkangwei.me/tags/fibonacci/</link>
+    <link>http://lingkangwei.me/tags/Fibonacci/</link>
     <description>Recent content in Fibonacci on Wind&#39;s Howling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,15 +10,18 @@
     <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
     <copyright>Kevin Ling, kevinkwl</copyright>
     <lastBuildDate>Wed, 21 Sep 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/fibonacci/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://lingkangwei.me/tags/Fibonacci/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A log(n) Algorithm for Fibonacci Numbers</title>
-      <link>http://lingkangwei.me/notes/faster-fibonacci/</link>
+      <link>http://lingkangwei.me/writing/faster-fibonacci/</link>
       <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
       <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://lingkangwei.me/notes/faster-fibonacci/</guid>
-      <description>A simple algorithm</description>
+      <guid>http://lingkangwei.me/writing/faster-fibonacci/</guid>
+      <description>Explanation This algorithm is an exercise in the book Structure and Interpretation of Computer Programs (1.19).
+Original method The usual way of computing the fibonacci number is by using the definition of fibonacci numbers: \[ f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2) \] It&#39;s trivial to write a recursive procedure to calculate fibonacci numbers, but the cost grows exponentially. Using memorization techniques and dynamic programming, we can achieve a linear time complexity.</description>
     </item>
     
   </channel>

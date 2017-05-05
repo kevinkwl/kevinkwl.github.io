@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Category on Wind&#39;s Howling</title>
+    <link>http://lingkangwei.me/category/</link>
+    <description>Recent content in Category on Wind&#39;s Howling</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>lingkangwei.kevin@gmail.com (Kevin Ling)</managingEditor>
+    <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
+    <copyright>Kevin Ling, kevinkwl</copyright>
+    
+	<atom:link href="http://lingkangwei.me/category/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Misc</title>
+      <link>http://lingkangwei.me/category/Misc/</link>
+      <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/category/Misc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>http://lingkangwei.me/category/Notes/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/category/Notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ramblings</title>
+      <link>http://lingkangwei.me/category/Ramblings/</link>
+      <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://lingkangwei.me/category/Ramblings/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
