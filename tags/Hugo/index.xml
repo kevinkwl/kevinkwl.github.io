@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Wind&#39;s Howling</title>
-    <link>http://kevinkwl.me/tags/Hugo/</link>
+    <link>http://kevinkwl.me/tags/hugo/</link>
     <description>Recent content in Hugo on Wind&#39;s Howling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,7 +11,7 @@
     <copyright>Kevin Ling, kevinkwl</copyright>
     <lastBuildDate>Tue, 28 Mar 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://kevinkwl.me/tags/Hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://kevinkwl.me/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
