@@ -1,4 +1,8 @@
-{{ partial "common/head.html" . }}
-{{ partial "common/nav.html" . }}
-{{ partial "common/header.html" . }}
-{{ partial "common/footer.html" . }}
+{{ define "header" }}{{ partial "site-header.html" . }}{{ end }}
+{{ define "main" }}
+    <article class="center cf pv5 measure-wide-l">
+      <h1>
+        This is not the page you were looking for
+      </h1>
+    </article>
+{{ end }}

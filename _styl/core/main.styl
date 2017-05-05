@@ -1,0 +1,142 @@
+html
+  font-size: $font-size-base
+
+body
+  margin: 0;
+  font-family: $font-family-base
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  color: $text-color
+  font-size: 18px;
+  line-height: 1.4;
+  min-height: 100%
+
+  // for stick footer
+  display: flex;
+  flex-direction: column;
+
+main
+  flex: 1
+
+h1, h2, h3, h4
+  letter-spacing: 0
+  font-weight: 700
+  font-style: normal
+  font-family: $font-family-headings
+  color: rgba(0, 0, 0, .8)
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: $font-family-headings;
+}
+
+h2, h3, h4, h5, h6 { margin: 20px 0 15px; }
+
+for headline in (1..6) {
+  h{headline} {
+    font-size: $font-size-headings-base - $font-size-headings-step * headline;
+  }
+
+  +mobile() {
+    h{headline} {
+      font-size: $font-size-headings-base - $font-size-headings-step * headline - 4px;
+    }
+  }
+}
+
+p { margin: 0 0 25px 0; }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  word-wrap: break-word;
+
+  &:hover {
+    color: $link-hover-color;
+    border-bottom-color: $link-decoration-hover-color;
+  }
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+dt { font-weight: $font-weight-bolder; }
+
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+blockquote, p
+  margin: 0 0 29px
+
+pre, code
+  font-family: $font-family-monospace
+  font-size: $code-font-size
+
+
+span.taxonomy
+  color: $taxonomy-name-color
+  font-weight: normal
+  font-size: $taxonomy-name-font-size
+
+ul.all-tags
+  li
+    list-style: none
+    display: inline-block
+    margin: auto 5px
+
+ul.all-category
+  li
+    list-style: none
+    font-family: Lato
+    font-size: 20px
+
+a.tag
+  background: rgba(0, 0, 0, 0.05)
+  font-size: 13px
+  padding: 5px 10px
+  color: rgba(0, 0, 0, .6)
+  display: inline !important
+  border-radius: 3px
+
+  &:hover
+    background: rgba(0, 0, 0, .1)
+    color: rgba(0, 0, 0, .6)
+
+a.category
+  color: rgba(0, 0, 0, .6)
+  display: inline !important
+
+  &:hover
+    color: $turquoise
+
+span.in-tax-count
+  color: rgba(0, 0, 0, .44)
+  font-size: 16px
+
+.post-info ul.all-tags
+  padding: 2px
+  margin: 10px 0 0 0

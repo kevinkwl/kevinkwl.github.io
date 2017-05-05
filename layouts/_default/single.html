@@ -1,34 +1,48 @@
-{{ partial "common/head.html" . }}
-{{ partial "common/nav.html" . }}
-{{ partial "common/header.html" . }}
-  <section id="{{ lower .Title | urlize }}" class="content" itemscope itemtype="http://schema.org/Article">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          {{ if ge .WordCount 250 }}
-            <p class="word-count">
-              {{ .WordCount }} words · {{ .ReadingTime }} min read
-            </p>
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+<div class="post-wrapper">
+  <div class="container">
+    <article>
+      <div class="post-meta">
+        <span class="post-category">
+          {{ if isset .Params "category" }}
+            <a class="category" href="{{ $.Site.BaseURL }}category/{{ .Params.category | urlize }}/">{{ .Params.category }}</a>
           {{ end }}
-          {{ .Content }}
-          <p class="meta">
-              <a href="/{{ lower .Section | urlize }}/"><i class="fa fa-archive">&nbsp;</i>{{ .Section | humanize | title }}</a>
-            &nbsp;&nbsp;
-            <i class="fa fa-calendar-o" content="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">&nbsp;</i>{{ .Date.Format "2 Jan, 2006" }}
-            <br />
-          {{ range .Params.tags }}
-            <a href="/tags/{{ lower . | urlize }}/"><i class="fa fa-tag">&nbsp;</i>{{ . }}</a>&nbsp;&nbsp;
-          {{ end }}
-          <br />
-          Copyright &copy; {{ .Site.Params.Copyright }} {{ .Site.LastChange.Year }}
-          </p>
-        </div>
+        </span>
       </div>
-      <div class="row">
-        {{ partial "common/related.html" . }}
-        {{ partial "common/disqus.html" . }}
-        {{ partial "common/breadcrumbs.html" . }}
+      <h1 class="title">
+        {{ .Title }}
+      </h1>
+      <div class="post-meta">
+        <span class="post-date">
+          {{ .Date.Format "2 Jan, 2006" }}
+        </span>
+        &bullet;
+        <span class="read-time">
+          {{ .ReadingTime }} min read
+        </span>
       </div>
+      {{ if isset .Params "image" }}
+      <img class="post-image full-width" src="{{ .Site.Params.Imgurl }}{{ .Params.image }}" alt="image from {{ .Title }}"/>
+
+      {{ end }}
+      <section class="content">
+        {{ .Content }}
+      </section>
+      <div class="after-post-meta">
+      <ul class="all-tags">
+        {{ range .Params.tags }}
+        <li>
+        <a class="tag" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">{{ . }}</a>
+        </li>
+        {{ end }}
+      </div>
+      </div>
+    </article>
+    <div class="ph3 mt2 mt6-ns">
+      {{ partial "related.html" . }}
     </div>
-  </section>
-{{ partial "common/footer.html" . }}
+    {{ partial "disqus.html" . }}
+  </div>
+</div>
+{{ end }}

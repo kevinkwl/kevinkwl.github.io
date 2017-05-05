@@ -7,24 +7,32 @@ pluralizelisttitles: "false"
 footnoteReturnLinkContents: "^"
 
 params:
-  description: "Coder, Reader, Runner. Essays, Blog. China."
-  author: 
+  description: "Coder Reader Runner"
+  author:
     name: Kevin Ling
     email: lingkangwei.kevin@gmail.com
-  Urlimg: "assets/img/"
+  imgurl: "/assets/img/"
   disqus: "winds-howling"
   copyright: "Kevin Ling, kevinkwl"
   github: "kevinkwl"
-  top: ""
+  homebg: "home-bg.jpg"
+
+social:
+  github: "kevinkwl"
+  linkedin: "kangwei-ling-520aab131"
+
+
+googleAnalytics: "UA-98612858-1"
 
 # include this sections in writing index.
-  indexInclude:
-    - essays
-    - misc
-    - notes
+indexInclude:
+  - essays
+  - misc
+  - notes
 
 taxonomies:
   tag: "tags"
+  category: "category"
 
 ignoreFiles:
   - /_output
@@ -32,8 +40,11 @@ ignoreFiles:
   - /_img
   - /_less
   - /.git
+  - /_styl
 
 MetaDataFormat: "yaml"
+
+preserveTaxonomyNames: true
 
 blackfriday:
   plainIDAnchors: true

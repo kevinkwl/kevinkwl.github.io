@@ -1,0 +1,10 @@
+<footer class="bg-white boxShadowTop" role="contentinfo">
+  <div class="footer-social">
+  {{ partial "social-follow.html" . }}
+  </div>
+  <div class="copyright">
+  <span>
+    Copyright &copy; {{ now.Format "2006" }} {{ .Site.Params.Copyright }}
+  </span>
+  </div>
+</footer>

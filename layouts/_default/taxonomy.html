@@ -1,0 +1,18 @@
+{{ define "main-extra" }}class="bg-gray"{{ end }}
+{{ define "main" }}
+  <div class="main-wrapper">
+    {{ $section := .Data.Pages }}
+    <section class="article-list">
+      {{ range  $section }}
+        <div class="card post-item">
+          <div class="post-info">
+            <a href="{{ .URL }}">
+            {{ partial "summary.html" . }}
+            </a>
+          </div>
+        </div>
+      {{ end }}
+    </section>
+  {{ template "_internal/pagination.html" . }}
+  </div>
+{{ end }}

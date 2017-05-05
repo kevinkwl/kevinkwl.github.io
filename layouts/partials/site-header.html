@@ -1,0 +1,24 @@
+<header class="clearfix page-header boxShadowBottom">
+  <div class="container">
+    <div class="hero">
+      {{ if eq .Kind "section" }}
+        {{ with (index .Site.Data.section .Section) }}
+      <h1 class="hero-title">{{ .long_title }}</h1>
+      <p class="hero-description">{{ .description }}</p>
+        {{ end }}
+      {{ else if eq .Kind "taxonomy" }}
+      <span class="taxonomy">{{ upper .Data.Singular }}</span>
+      <h1 class="hero-title">{{ .Title }}</h1>
+      {{ else if eq .Kind "taxonomyTerm" }}
+      <span class="taxonomy">{{ upper .Data.Plural }}</span>
+      {{ $taxonomyname := .Data.Plural }}
+      {{ $taxonomynameSingle := .Data.Singular }}
+      <ul class="all-taxonomies all-{{ $taxonomyname }}">
+        {{ range $key, $value := .Data.Terms.ByCount }}
+          <li><a class="taxonomy-term {{ $taxonomynameSingle }}" href="/{{ $taxonomyname | urlize }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+  </div>
+</header>

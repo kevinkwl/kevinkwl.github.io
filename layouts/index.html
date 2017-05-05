@@ -1,9 +1,34 @@
-{{ partial "common/head.html" . }}
-{{ partial "common/nav.html" . }}
-  <div id="fullpage">
-{{ partial "home/top.html" . }}
-{{ partial "home/about.html" . }}
-{{ partial "home/blog.html" . }}
-{{ partial "home/contact.html" . }}
+{{ define "head-extra" }}
+
+{{ end }}
+
+
+{{ define "body-class" }}home{{ end }}
+
+{{ define "header" }}{{ end }}
+
+{{ define "main" }}
+<div class="home-overlay" style="background-image: url({{ .Site.Params.Imgurl }}{{ .Site.Params.Homebg}})"></div>
+<div class="overlay overlay-gray"></div>
+<div class="wrapper">
+  <h1>Kevin Ling</h1>
+
+  <div class="nav">
+    <ul class="links">
+      <li>
+        <a href="{{ "writing" | absURL }}">Writings</a>
+      </li>
+      <li>
+        <a href="{{ "writing" | absURL }}">Wiki</a>
+      </li>
+      <li>
+        <a href="{{ "writing" | absURL }}">About</a>
+      </li>
+    </ul>
   </div>
-{{ partial "common/footer.html" . }}
+</div>
+<div class="home-social-bar">
+  {{ partial "social-follow.html" . }}
+</div>
+
+{{ end }}

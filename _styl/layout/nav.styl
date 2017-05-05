@@ -1,0 +1,52 @@
+div#nav-wrapper
+  background-color: #fff
+
+  &:after
+    content:"";
+    display:block;
+    clear:both;
+
+nav.navbar
+  max-width: $navbar-max-width
+  margin: 0 auto
+  position: relative
+  padding: 0 $navbar-padding
+  background-color: #fff
+
+  &:after
+    content:"";
+    display:block;
+    clear:both;
+
+
+  div.left, div.right
+    display: inline-block
+    height: $navbar-height !important
+    padding: ($navbar-padding / 2)
+
+    +mobile()
+      display: block
+      float: none
+      text-align: center
+
+    ul
+      margin: 0
+
+  li
+    list-style: none
+    display: inline-block
+    margin-right: $nav-item-margin
+
+    &:last-child
+      margin-right: 0
+
+    a
+      color: rgba(0,0,0,.44)
+
+  a
+    line-height: $navbar-height - $navbar-padding;
+    font-size: $font-size-small
+
+
+    &:hover
+      color: #00ab6b
