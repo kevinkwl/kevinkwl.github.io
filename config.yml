@@ -45,8 +45,6 @@ ignoreFiles:
 
 MetaDataFormat: "yaml"
 
-preserveTaxonomyNames: true
-
 blackfriday:
   plainIDAnchors: true
   extensions:
