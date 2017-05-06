@@ -33,7 +33,7 @@
       <ul class="all-tags">
         {{ range .Params.tags }}
         <li>
-        <a class="tag" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">{{ . }}</a>
+        <a class="tag" href="{{ $.Site.BaseURL }}tags/{{ lower . | urlize }}/">{{ . }}</a>
         </li>
         {{ end }}
       </div>

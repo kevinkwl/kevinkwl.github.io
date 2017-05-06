@@ -15,7 +15,12 @@
       {{ $taxonomynameSingle := .Data.Singular }}
       <ul class="all-taxonomies all-{{ $taxonomyname }}">
         {{ range $key, $value := .Data.Terms.ByCount }}
-          <li><a class="taxonomy-term {{ $taxonomynameSingle }}" href="/{{ $taxonomyname | urlize }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a></li>
+          <li>
+            <a class="taxonomy-term {{ $taxonomynameSingle }}" href="/{{ $taxonomyname | urlize }}/{{ $value.Name | urlize }}">
+            {{ $value.Name }}
+            <span class="count">{{ $value.Count }}</span>
+            </a>
+          </li>
         {{ end }}
       </ul>
       {{ end }}

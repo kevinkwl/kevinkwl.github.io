@@ -105,33 +105,26 @@ span.taxonomy
 ul.all-tags
   li
     list-style: none
-    display: inline-block
     margin: auto 5px
 
-ul.all-category
+ul.all-taxonomies
   li
     list-style: none
     font-family: Lato
-    font-size: 20px
+    font-size: $font-size-headings-base
+    font-weight: bold
 
-a.tag
-  background: rgba(0, 0, 0, 0.05)
-  font-size: 13px
+a.taxonomy-term
   padding: 5px 10px
-  color: rgba(0, 0, 0, .6)
+  color: $blue
   display: inline !important
   border-radius: 3px
 
   &:hover
-    background: rgba(0, 0, 0, .1)
+    text-decoration: underline;
+
+  span.count
     color: rgba(0, 0, 0, .6)
-
-a.category
-  color: rgba(0, 0, 0, .6)
-  display: inline !important
-
-  &:hover
-    color: $turquoise
 
 span.in-tax-count
   color: rgba(0, 0, 0, .44)
