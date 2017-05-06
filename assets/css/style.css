@@ -488,27 +488,49 @@ span.taxonomy {
   font-weight: normal;
   font-size: 14px;
 }
+ul.all-taxonomies li {
+  display: block;
+  font-family: "Lato";
+  font-size: 25px;
+}
+ul.all-taxonomies li a {
+  color: #0684bd;
+}
+ul.all-taxonomies li a:hover {
+  color: #87daff;
+}
+ul.all-taxonomies li a span.count {
+  margin-left: 10px;
+  color: #333;
+}
 ul.all-tags li {
   list-style: none;
-  margin: auto 5px;
+  margin: 5px 5px;
+  display: inline-block;
 }
-ul.all-taxonomies li {
+ul.all-category li {
   list-style: none;
   font-family: Lato;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 20px;
 }
-a.taxonomy-term {
+a.tag {
+  background: rgba(0,0,0,0.05);
+  font-size: 13px;
   padding: 5px 10px;
-  color: #0684bd;
+  color: rgba(0,0,0,0.6);
   display: inline !important;
   border-radius: 3px;
 }
-a.taxonomy-term:hover {
-  text-decoration: underline;
-}
-a.taxonomy-term span.count {
+a.tag:hover {
+  background: rgba(0,0,0,0.1);
   color: rgba(0,0,0,0.6);
+}
+a.category {
+  color: rgba(0,0,0,0.6);
+  display: inline !important;
+}
+a.category:hover {
+  color: #36d7b7;
 }
 span.in-tax-count {
   color: rgba(0,0,0,0.44);
