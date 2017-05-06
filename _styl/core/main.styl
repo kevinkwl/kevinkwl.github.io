@@ -102,29 +102,53 @@ span.taxonomy
   font-weight: normal
   font-size: $taxonomy-name-font-size
 
+ul.all-taxonomies
+  li
+    display: block
+    font-family: $font-family-headings
+    font-size: 25px
+
+    a
+      color: $blue
+
+      &:hover
+        color: $blue-bright
+
+      span.count
+        margin-left: 10px
+        color: $text-color
+
+
 ul.all-tags
   li
     list-style: none
-    margin: auto 5px
+    margin: 5px 5px
+    display: inline-block
 
-ul.all-taxonomies
+ul.all-category
   li
     list-style: none
     font-family: Lato
-    font-size: $font-size-headings-base
-    font-weight: bold
+    font-size: 20px
 
-a.taxonomy-term
+a.tag
+  background: rgba(0, 0, 0, 0.05)
+  font-size: 13px
   padding: 5px 10px
-  color: $blue
+  color: rgba(0, 0, 0, .6)
   display: inline !important
   border-radius: 3px
 
   &:hover
-    text-decoration: underline;
-
-  span.count
+    background: rgba(0, 0, 0, .1)
     color: rgba(0, 0, 0, .6)
+
+a.category
+  color: rgba(0, 0, 0, .6)
+  display: inline !important
+
+  &:hover
+    color: $turquoise
 
 span.in-tax-count
   color: rgba(0, 0, 0, .44)

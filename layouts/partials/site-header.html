@@ -13,10 +13,10 @@
       <span class="taxonomy">{{ upper .Data.Plural }}</span>
       {{ $taxonomyname := .Data.Plural }}
       {{ $taxonomynameSingle := .Data.Singular }}
-      <ul class="all-taxonomies all-{{ $taxonomyname }}">
+      <ul class="all-taxonomies">
         {{ range $key, $value := .Data.Terms.ByCount }}
           <li>
-            <a class="taxonomy-term {{ $taxonomynameSingle }}" href="/{{ $taxonomyname | urlize }}/{{ $value.Name | urlize }}">
+            <a class="taxonomy-term" href="/{{ $taxonomyname | urlize }}/{{ $value.Name | urlize }}">
             {{ $value.Name }}
             <span class="count">{{ $value.Count }}</span>
             </a>

@@ -4,7 +4,7 @@
 #+TAGS: Algorithm Fibonacci
 #+DESCRIPTION: A simple algorithm
 #+CATEGORY: Notes
- 
+
 * Explanation
 This algorithm is an exercise in the book *Structure
 and Interpretation of Computer Programs* (1.19).
