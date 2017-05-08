@@ -4,6 +4,7 @@
 #+TAGS: Algorithm Fibonacci
 #+DESCRIPTION: A simple algorithm
 #+CATEGORY: Notes
+#+image: code-fibo.png
 
 * Explanation
 This algorithm is an exercise in the book *Structure

@@ -1,0 +1,71 @@
+#+TITLE: Learning Topic-Sensitive Word Representations
+#+TAGS: NLP
+#+CATEGORY: Notes
+#+DATE: 2017-05-08
+#+DESCRIPTION: Some notes on the ACL2017 paper: _Learning Topic-Sensitive Word Representations_.
+
+[[https://arxiv.org/pdf/1705.00441.pdf][Link to paper]]
+
+* About Word Embedding
+The concept (or technique) of *Word Embedding* plays a crucial role in the
+recent Natural Language Processing field. Instead of high-dimensional
+(vocabulary size), extremely sparse (one-hot) vectors, smaller
+size (< 1k dimensions) real-valued vectors are used to model words and languages.
+These smaller, dense real-valued vectors are referred to distributed word
+representation, in that the information about the word is distributed among each
+dimension.
+
+Most existing word embedding models (word2vec, glove, ...) only use one
+representation per word. Though these models have already achieved amazing
+results on many task, they fail to distinguish different meanings of polysemous
+words. For example, the word =bank=, has two distinct meanings which can only be
+inferred from the context. However, the two meanings share the same word
+representation.
+
+* Topic-Sensitive Embedding
+There are many existing models that deal with these problem, but the author points out
+that these methods are laborious and limited to few languages. Also, word senses
+are difficult to capture and define. In this paper, the *Hierarchicial Dirichlet
+Process* topic model is introduced and embedded into a skip-gram model.
+
+Each document can have several topics, and each word in that document is
+associated with one topic. In the case of learning word representations, the
+document can be a sentence or a group of sentences that come from the same
+document. It's assumed that the sense of a word is related to the topic. So it
+is actually topic-word embeddings.
+
+HDP is used to learn all topics from a subset of the corpus, then run HDP on the
+same corpus to obtain all word-topic labeling and document-level topics
+distribution. These two distribution, along with the context of words, are used
+in Skip-gram learning.
+
+As a modification to skip-gram, the input word (center-word) is a word-topic
+pair, and for output word (context words), normal generic representations are
+used, in order to reduce sparsity.
+
+* Models
+Three approaches are proposed, they are:
+
++ HTLE, hard-topic labeled representation. In this setting, each word-topic pair
+  is a separate vocabulary entry (for input word, aka target word), and unlabeled word
+  representations for context words (output).
+
+  $$\textbf{h}_{HTLE}(w_i) = \textbf{r}(w_i^\tau)$$
+
++ HTLEadd, modify the target word embedding to be the sum of word-topic
+  embedding and a generic word embedding. In this way, the training process
+  shares some information between different topic-word representations for the
+  same word.
+
+  $$\textbf{h}_{HTLEadd}(w_i) = \textbf{r'}(w_i^\tau) + {\bf r_o}(w_i)$$
+
++ STLE, soft-topic labeled representations. For each update, use the topic
+  distribution to compute a weighted sum over the word-topic embedding
+
+  $$\textbf{h}_{STLE}(w_i) = \sum_{k=1}^Tp(\tau_k | d_i) \textbf{r''}(w_i^{\tau_k})$$
+
+[[file:/assets/img/topic-sensitive-embedding/models.png]]
+
+
+
+

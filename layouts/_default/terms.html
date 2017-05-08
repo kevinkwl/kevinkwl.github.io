@@ -6,7 +6,7 @@
       {{ range $key, $value := .Data.Terms }}
         <h3 class="taxonomy-single-title">
           <a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}" class="taxonomy-single-title-link">
-            {{ $key }} <span class="in-tax-count">({{ $value.Count }})</span>
+            {{ replace $key "-" " " | title | markdownify }} <span class="in-tax-count">({{ $value.Count }})</span>
           </a>
         </h3>
         <section class="article-list">

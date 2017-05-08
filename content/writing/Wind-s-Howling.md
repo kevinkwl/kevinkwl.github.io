@@ -3,7 +3,7 @@ title: " Le roi est mort, vive le roi!"
 date: 2017-04-03
 description: I embarked on a new journey
 image: musings.jpg
-tags: [Life, Writing]
+tags: ["Life", "Writing"]
 category: Ramblings
 type: post
 ---
