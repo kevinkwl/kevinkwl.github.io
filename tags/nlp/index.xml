@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nlp on Wind&#39;s Howling</title>
+    <link>http://kevinkwl.me/tags/nlp/</link>
+    <description>Recent content in Nlp on Wind&#39;s Howling</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>lingkangwei.kevin@gmail.com (Kevin Ling)</managingEditor>
+    <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
+    <copyright>Kevin Ling, kevinkwl</copyright>
+    <lastBuildDate>Mon, 08 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kevinkwl.me/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning Topic-Sensitive Word Representations</title>
+      <link>http://kevinkwl.me/writing/learn-topic-sensitive-word-representations/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
+      <guid>http://kevinkwl.me/writing/learn-topic-sensitive-word-representations/</guid>
+      <description>Link to paper
+About Word Embedding The concept (or technique) of Word Embedding plays a crucial role in the recent Natural Language Processing field. Instead of high-dimensional (vocabulary size), extremely sparse (one-hot) vectors, smaller size (Most existing word embedding models (word2vec, glove, ...) only use one representation per word. Though these models have already achieved amazing results on many task, they fail to distinguish different meanings of polysemous words. For example, the word bank, has two distinct meanings which can only be inferred from the context.</description>
+    </item>
+    
+  </channel>
+</rss>
