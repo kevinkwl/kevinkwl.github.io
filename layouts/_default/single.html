@@ -9,11 +9,11 @@
             <a class="category" href="{{ $.Site.BaseURL }}category/{{ lower .Params.category | urlize }}/">{{ .Params.category }}</a>
           {{ end }}
         </span>
-      </div>
+
       <h1 class="title">
         {{ .Title | markdownify }}
       </h1>
-      <div class="post-meta">
+
         <span class="post-date">
           {{ .Date.Format "2 Jan, 2006" }}
         </span>
