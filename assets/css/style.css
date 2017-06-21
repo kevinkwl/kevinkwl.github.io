@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i");
 /* normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15; /* 1 */
@@ -346,7 +347,7 @@ div.social a:last-child {
   src: url("/assets/fonts/Crimson-BoldItalic.woff") format('woff');
 }
 html {
-  font-size: 21px;
+  font-size: 18px;
 }
 body {
   margin: 0;
@@ -398,51 +399,51 @@ h6 {
   margin: 20px 0 15px;
 }
 h1 {
-  font-size: 26px;
+  font-size: 23px;
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 22px;
+    font-size: 19px;
   }
 }
 h2 {
-  font-size: 24px;
+  font-size: 21px;
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 h3 {
-  font-size: 22px;
+  font-size: 19px;
 }
 @media (max-width: 767px) {
   h3 {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 h4 {
-  font-size: 20px;
+  font-size: 17px;
 }
 @media (max-width: 767px) {
   h4 {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 h5 {
-  font-size: 18px;
+  font-size: 15px;
 }
 @media (max-width: 767px) {
   h5 {
-    font-size: 14px;
+    font-size: 11px;
   }
 }
 h6 {
-  font-size: 16px;
+  font-size: 13px;
 }
 @media (max-width: 767px) {
   h6 {
-    font-size: 12px;
+    font-size: 9px;
   }
 }
 p {
@@ -541,12 +542,15 @@ span.in-tax-count {
   margin: 10px 0 0 0;
 }
 article h1.title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 10px;
 }
 article section {
-  font-family: "Crimson Text", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.95rem;
+}
+article section p {
+  line-height: 1.8;
 }
 div.tags {
   margin-top: 0.5em;
@@ -568,6 +572,7 @@ div.tags a.tag:before {
 .post-meta {
   color: rgba(0,0,0,0.44);
   font-size: 12px;
+  margin: 1em auto;
 }
 a.category {
   color: #00ab6b;
@@ -581,7 +586,7 @@ a.category {
   border-bottom: #ddd 1px solid;
 }
 div.related .description {
-  font-family: "Crimson Text", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 div.related ul.relatedPosts li.relatedPost {
   list-style: none;
@@ -594,10 +599,13 @@ div.related ul.relatedPosts li.relatedPost a {
   max-width: 100%;
 }
 .content a {
-  border-bottom: 1px solid #00ab6b;
+  color: #00ab6b;
 }
 .content a:hover {
   border-bottom-width: 2px;
+}
+.content h1 {
+  margin: 0.5em 0;
 }
 .content figure figcaption {
   text-align: center;
@@ -710,7 +718,7 @@ header.page-header .container .hero-title {
   margin-top: 0;
   font-weight: 700;
   font-style: normal;
-  font-size: 32px;
+  font-size: 29px;
   margin-left: -2.75px;
   line-height: 1.2;
   letter-spacing: 0;
@@ -777,7 +785,7 @@ nav.navbar li a {
 }
 nav.navbar a {
   line-height: 30px;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 300;
 }
 nav.navbar a:hover {
@@ -807,11 +815,12 @@ body {
 .main-wrapper .post-item .post-info h2.title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 29px;
+  font-size: 25px;
 }
 .main-wrapper .post-item .post-info .description {
-  font-family: "Crimson Text", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
   color: rgba(0,0,0,0.8);
+  font-size: 0.9rem;
 }
 .main-wrapper .post-item .post-info .readmore {
   font-size: 12px;
@@ -914,11 +923,11 @@ body.home .wrapper h1 {
 body.home .wrapper h2 {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: 200;
-  font-size: 28px;
+  font-size: 25px;
 }
 @media (max-width: 767px) {
   body.home .wrapper h2 {
-    font-size: 24px;
+    font-size: 21px;
   }
 }
 body.home .wrapper div.nav {
