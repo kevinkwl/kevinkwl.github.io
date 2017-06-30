@@ -2,7 +2,7 @@
 #+AUTHOR: Chase Adams
 #+DESCRIPTION: Just another golang parser for org content!
 #+DATE: 2017-03-28
-#+TAGS: Hugo orgmode Algorithm
+#+TAGS: orgmode Algorithm
 #+CATEGORY: Misc
 
 Have you ever wanted to parse org content with Go? Well now you can!
