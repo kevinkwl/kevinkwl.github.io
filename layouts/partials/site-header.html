@@ -15,9 +15,23 @@
       {{ $taxonomynameSingle := .Data.Singular }}
       <ul class="all-taxonomies">
         {{ range $key, $value := .Data.Terms.ByCount }}
+          {{ $.Scratch.Set "friendly" $value.Name }}
+          {{ $WeightedPage := index $value.WeightedPages 0 }}
+          {{ $page := $WeightedPage.Page }}
+
+          {{ if ne $taxonomyname $taxonomynameSingle }}
+            {{ range (index $page.Params $taxonomyname)}}
+              {{ $base := urlize (lower . )}}
+              {{ if eq $base (urlize (lower $value.Name)) }}
+                {{ $.Scratch.Set "friendly" .}}
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            {{ $.Scratch.Set "friendly" (index $page.Params $.Data.Plural)}}
+          {{ end }}
           <li>
             <a class="taxonomy-term" href="/{{ $taxonomyname | urlize }}/{{ $value.Name | urlize }}">
-            {{ replace $value.Name "-" " " | upper | markdownify }}
+            {{ $.Scratch.Get "friendly" }}
             <span class="count">{{ $value.Count }}</span>
             </a>
           </li>

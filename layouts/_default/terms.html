@@ -4,9 +4,22 @@
   <div class="main-wrapper">
     <section class="ph4">
       {{ range $key, $value := .Data.Terms }}
+        {{ $.Scratch.Set "friendly" $key }}
+        {{ $page := index $value.Pages 0 }}
+
+        {{ if ne $.Data.Plural $.Data.Singular }}
+          {{ range (index $page.Params $.Data.Plural )}}
+            {{ $base := urlize (lower . )}}
+            {{ if eq $base (urlize (lower $key)) }}
+              {{ $.Scratch.Set "friendly" .}}
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{ $.Scratch.Set "friendly" (index $page.Params $.Data.Plural)}}
+        {{ end }}
         <h3 class="taxonomy-single-title">
           <a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}" class="taxonomy-single-title-link">
-            {{ replace $key "-" " " | title | markdownify }} <span class="in-tax-count">({{ $value.Count }})</span>
+            {{ $.Scratch.Get "friendly" }} <span class="in-tax-count">({{ $value.Count }})</span>
           </a>
         </h3>
         <section class="article-list">
