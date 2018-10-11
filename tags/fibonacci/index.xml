@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fibonacci on Wind&#39;s Howling</title>
-    <link>http://kevinkwl.me/tags/fibonacci/</link>
-    <description>Recent content in Fibonacci on Wind&#39;s Howling</description>
+    <title>Fibonacci on Kangwei Ling</title>
+    <link>https://kevinkwl.github.io/tags/fibonacci/</link>
+    <description>Recent content in Fibonacci on Kangwei Ling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>lingkangwei.kevin@gmail.com (Kevin Ling)</managingEditor>
-    <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
-    <copyright>Kevin Ling, kevinkwl</copyright>
     <lastBuildDate>Wed, 21 Sep 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://kevinkwl.me/tags/fibonacci/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevinkwl.github.io/tags/fibonacci/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A log(n) Algorithm for Fibonacci Numbers</title>
-      <link>http://kevinkwl.me/writing/faster-fibonacci/</link>
+      <link>https://kevinkwl.github.io/writing/faster-fibonacci/</link>
       <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/writing/faster-fibonacci/</guid>
+      
+      <guid>https://kevinkwl.github.io/writing/faster-fibonacci/</guid>
       <description>Explanation This algorithm is an exercise in the book Structure and Interpretation of Computer Programs (1.19).
 Original method The usual way of computing the fibonacci number is by using the definition of fibonacci numbers: \[ f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2) \] It&#39;s trivial to write a recursive procedure to calculate fibonacci numbers, but the cost grows exponentially. Using memorization techniques and dynamic programming, we can achieve a linear time complexity.</description>
     </item>

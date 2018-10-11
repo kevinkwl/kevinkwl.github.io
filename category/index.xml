@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Category on Wind&#39;s Howling</title>
-    <link>http://kevinkwl.me/category/</link>
-    <description>Recent content in Category on Wind&#39;s Howling</description>
+    <title>Category on Kangwei Ling</title>
+    <link>https://kevinkwl.github.io/category/</link>
+    <description>Recent content in Category on Kangwei Ling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>lingkangwei.kevin@gmail.com (Kevin Ling)</managingEditor>
-    <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
-    <copyright>Kevin Ling, kevinkwl</copyright>
     
-	<atom:link href="http://kevinkwl.me/category/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevinkwl.github.io/category/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Misc</title>
-      <link>http://kevinkwl.me/category/misc/</link>
+      <link>https://kevinkwl.github.io/category/misc/</link>
       <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/category/misc/</guid>
+      
+      <guid>https://kevinkwl.github.io/category/misc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Notes</title>
-      <link>http://kevinkwl.me/category/notes/</link>
+      <link>https://kevinkwl.github.io/category/notes/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/category/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ramblings</title>
-      <link>http://kevinkwl.me/category/ramblings/</link>
-      <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/category/ramblings/</guid>
+      
+      <guid>https://kevinkwl.github.io/category/notes/</guid>
       <description></description>
     </item>
     

@@ -1,79 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Wind&#39;s Howling</title>
-    <link>http://kevinkwl.me/tags/</link>
-    <description>Recent content in Tags on Wind&#39;s Howling</description>
+    <title>Tags on Kangwei Ling</title>
+    <link>https://kevinkwl.github.io/tags/</link>
+    <description>Recent content in Tags on Kangwei Ling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>lingkangwei.kevin@gmail.com (Kevin Ling)</managingEditor>
-    <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
-    <copyright>Kevin Ling, kevinkwl</copyright>
     <lastBuildDate>Tue, 28 Mar 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://kevinkwl.me/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevinkwl.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Algorithm</title>
-      <link>http://kevinkwl.me/tags/algorithm/</link>
+      <link>https://kevinkwl.github.io/tags/algorithm/</link>
       <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/tags/algorithm/</guid>
+      
+      <guid>https://kevinkwl.github.io/tags/algorithm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fibonacci</title>
-      <link>http://kevinkwl.me/tags/fibonacci/</link>
+      <link>https://kevinkwl.github.io/tags/fibonacci/</link>
       <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/tags/fibonacci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Life</title>
-      <link>http://kevinkwl.me/tags/life/</link>
-      <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/tags/life/</guid>
+      
+      <guid>https://kevinkwl.github.io/tags/fibonacci/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>http://kevinkwl.me/tags/linux/</link>
+      <link>https://kevinkwl.github.io/tags/linux/</link>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/tags/linux/</guid>
+      
+      <guid>https://kevinkwl.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nlp</title>
-      <link>http://kevinkwl.me/tags/nlp/</link>
+      <link>https://kevinkwl.github.io/tags/nlp/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/tags/nlp/</guid>
+      
+      <guid>https://kevinkwl.github.io/tags/nlp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Orgmode</title>
-      <link>http://kevinkwl.me/tags/orgmode/</link>
+      <link>https://kevinkwl.github.io/tags/orgmode/</link>
       <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/tags/orgmode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Writing</title>
-      <link>http://kevinkwl.me/tags/writing/</link>
-      <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/tags/writing/</guid>
+      
+      <guid>https://kevinkwl.github.io/tags/orgmode/</guid>
       <description></description>
     </item>
     

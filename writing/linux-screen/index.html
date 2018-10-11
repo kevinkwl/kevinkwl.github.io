@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Wind&#39;s Howling  | Keep process running via Screen</title>
+    <title>Kangwei Ling  | Keep process running via Screen</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.21-DEV" />
+     <meta name="generator" content="Hugo 0.49.1" />
       
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
-     <link href='http://kevinkwl.me/assets/css/style.css' rel='stylesheet' type="text/css" />
-     <link href='http://kevinkwl.me/assets/css/prism.css' rel='stylesheet' type="text/css" />  
+     <link href='https://kevinkwl.github.io/assets/css/style.css' rel='stylesheet' type="text/css" />
+     <link href='https://kevinkwl.github.io/assets/css/prism.css' rel='stylesheet' type="text/css" />  
      
      
 
@@ -25,43 +25,23 @@
       <meta property="og:title" content="Keep process running via Screen" />
 <meta property="og:description" content="screen" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://kevinkwl.me/writing/linux-screen/" />
-
-
-
-<meta property="article:published_time" content="2016-11-19T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://kevinkwl.github.io/writing/linux-screen/" /><meta property="article:published_time" content="2016-11-19T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2016-11-19T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
 
 <meta itemprop="name" content="Keep process running via Screen">
 <meta itemprop="description" content="screen">
 
 
+<meta itemprop="datePublished" content="2016-11-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2016-11-19T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="292">
 
 
 
-<meta itemprop="keywords" content="misc,notes,ramblings,algorithm,fibonacci,life,linux,nlp,orgmode,writing," />
-
-
-  <meta name="twitter:card" content="summary"/>
-
-
-
-<meta name="twitter:text:title" content="Keep process running via Screen"/>
+<meta itemprop="keywords" content="Linux," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Keep process running via Screen"/>
 <meta name="twitter:description" content="screen"/>
-
 
 
 
@@ -71,19 +51,19 @@
     <div id="nav-wrapper">
 <nav class="navbar" role="navigation">
   <div class="left">
-    <a href="http://kevinkwl.me/">Wind&#39;s Howling</a>
+    <a href="https://kevinkwl.github.io/">Kangwei Ling</a>
   </div>
 
   <div class="right">
     <ul>
       <li>
-        <a class="link" href="http://kevinkwl.me/writing">Writings</a>
+        <a class="link" href="https://kevinkwl.github.io/writing">Writings</a>
       </li>
       <li>
-        <a class="link" href="http://kevinkwl.me/tags">Tags</a>
+        <a class="link" href="https://kevinkwl.github.io/tags">Tags</a>
       </li>
       <li>
-        <a class="link" href="http://kevinkwl.me/about">About</a>
+        <a class="link" href="https://kevinkwl.github.io/about">About</a>
       </li>
     </ul>
   </div>
@@ -100,7 +80,7 @@
       <div class="post-meta">
         <span class="post-category">
           
-            <a class="category" href="http://kevinkwl.me/category/notes/">Notes</a>
+            <a class="category" href="https://kevinkwl.github.io/category/notes/">Notes</a>
           
         </span>
 
@@ -133,8 +113,7 @@ disconnect from ssh session.</p>
 
 <p>On Ubuntu:</p>
 
-<pre><code class="language-bash">
-sudo apt-get install screen
+<pre><code class="language-bash">sudo apt-get install screen
 </code></pre>
 
 <p>will install <code>screen</code>. Other Linux distributions can use their package managers
@@ -154,8 +133,7 @@ original shell).</p>
 <p>The command <code>$screen -ls</code> can list all screen windows, and use <code>$screen -r
 name-of-window</code> to reattach to that window, e.g.:</p>
 
-<pre><code class="language-bash">
-$ screen -ls
+<pre><code class="language-bash">$ screen -ls
 There are screens on:
 	835.pts-22.mercury	(11/19/16 19:15:27)	(Detached)
 	11375.pts-22.mercury	(11/19/16 16:32:05)	(Detached)
@@ -167,8 +145,7 @@ $ screen -r 835.pts-22.mercury
 <p>To kill a screen session, just hit <code>C-a k</code>, or <code>C-a</code> then enter <code>:quit</code> if you
 are in an attached window. Also,</p>
 
-<pre><code class="language-bash">
-$ screen -X -S [session # you want to kill] quit
+<pre><code class="language-bash">$ screen -X -S [session # you want to kill] quit
 </code></pre>
 
 <p>works.</p>
@@ -181,7 +158,7 @@ at <a href="https://www.gnu.org/software/screen/manual/" title="GNU Screen">GNU 
       <ul class="all-tags">
         
         <li>
-        <a class="tag" href="http://kevinkwl.me/tags/linux/">Linux</a>
+        <a class="tag" href="https://kevinkwl.github.io/tags/linux/">Linux</a>
         </li>
         
       </div>
@@ -200,8 +177,8 @@ at <a href="https://www.gnu.org/software/screen/manual/" title="GNU Screen">GNU 
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-        this.page.url = "http:\/\/kevinkwl.me\/writing\/linux-screen\/";
-        this.page.identifier = "http:\/\/kevinkwl.me\/writing\/linux-screen\/";
+        this.page.url = "https:\/\/kevinkwl.github.io\/writing\/linux-screen\/";
+        this.page.identifier = "https:\/\/kevinkwl.github.io\/writing\/linux-screen\/";
     };
 
     (function() {
@@ -252,7 +229,7 @@ at <a href="https://www.gnu.org/software/screen/manual/" title="GNU Screen">GNU 
   </div>
   <div class="copyright">
   <span>
-    Copyright &copy; 2017 Kevin Ling, kevinkwl
+    Copyright &copy; 2018 Kevin Ling, kevinkwl
   </span>
   </div>
 </footer>
@@ -286,12 +263,16 @@ MathJax.Hub.Config({
 
 
 
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-98612858-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-98612858-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
   </body>

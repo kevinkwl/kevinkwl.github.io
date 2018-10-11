@@ -1,69 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wind&#39;s Howling</title>
-    <link>http://kevinkwl.me/</link>
-    <description>Recent content on Wind&#39;s Howling</description>
+    <title>Kangwei Ling</title>
+    <link>https://kevinkwl.github.io/</link>
+    <description>Recent content on Kangwei Ling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>lingkangwei.kevin@gmail.com (Kevin Ling)</managingEditor>
-    <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
-    <copyright>Kevin Ling, kevinkwl</copyright>
     <lastBuildDate>Mon, 08 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://kevinkwl.me/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevinkwl.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Learning Topic-Sensitive Word Representations</title>
-      <link>http://kevinkwl.me/writing/learn-topic-sensitive-word-representations/</link>
+      <link>https://kevinkwl.github.io/writing/learn-topic-sensitive-word-representations/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/writing/learn-topic-sensitive-word-representations/</guid>
+      
+      <guid>https://kevinkwl.github.io/writing/learn-topic-sensitive-word-representations/</guid>
       <description>Link to paper
 About Word Embedding The concept (or technique) of Word Embedding plays a crucial role in the recent Natural Language Processing field. Instead of high-dimensional (vocabulary size), extremely sparse (one-hot) vectors, smaller size (Most existing word embedding models (word2vec, glove, ...) only use one representation per word. Though these models have already achieved amazing results on many task, they fail to distinguish different meanings of polysemous words. For example, the word bank, has two distinct meanings which can only be inferred from the context.</description>
     </item>
     
     <item>
-      <title> Le roi est mort, vive le roi!</title>
-      <link>http://kevinkwl.me/writing/Wind-s-Howling/</link>
-      <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/writing/Wind-s-Howling/</guid>
-      <description>The king is dead, long live the king!
- I have always wanted to write something.
-Yet my mind drifts like the snow. It is so hard for people like me to settle down. But this is the time.
-I’m not a writer, but I want to write. For so many times, words and sentences were making such noises, fighting to get out. Then I started to get all the equipments prepared (a notebook, a pen, or just my laptop).</description>
-    </item>
-    
-    <item>
       <title>Test File For chaseadamsio/goorgeous</title>
-      <link>http://kevinkwl.me/writing/test/</link>
+      <link>https://kevinkwl.github.io/writing/test/</link>
       <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/writing/test/</guid>
+      
+      <guid>https://kevinkwl.github.io/writing/test/</guid>
       <description>Have you ever wanted to parse org content with Go? Well now you can!
 It doesn&#39;t matter if you want to use an emphasis, bold, verbatim, code or strikethrough, they&#39;re all supported!
 If you&#39;re curious what else it supports, you&#39;re in luck, you can find it all here (did I mention plain links work?)!
-  this is a picture for gopher gopher    Headline 1 Headline 2 Headline 3 Headline 4 Headline 5 Headline 6  TODO Headline 1 DONE Headline 1 TODO Headline 2 DONE Headline 2 TODO Headline 3 DONE Headline 3 TODO Headline 4 DONE Headline 4 TODO Headline 5 DONE Headline 5 TODO Headline 6 DONE Headline 6 [A] Headline 1 [A] Headline 2 [A] Headline 3 [A] Headline 4 [A] Headline 5 [A] Headline 6 TODO [A] Headline 1 TODO [A] Headline 2 TODO [A] Headline 3 TODO [A] Headline 4 TODO [A] Headline 5 TODO [A] Headline 6 Headline 1 tags are supported  Headline 2 tags are supported  Headline 3 tags are supported  Headline 4 tags are supported  Headline 5 tags are supported  Headline 6 tags are supported  TODO [A] Headline 1 tags are supported  TODO [A] Headline 2 tags are supported  TODO [A] Headline 3 tags are supported  TODO [A] Headline 4 tags are supported  TODO [A] Headline 5 tags are supported  TODO [A] Headline 6 tags are supported  elements  unordered 1 2 lists are supported.</description>
+   this is a picture for gopher gopher    Headline 1 Headline 2 Headline 3 Headline 4 Headline 5 Headline 6  TODO Headline 1 DONE Headline 1 TODO Headline 2 DONE Headline 2 TODO Headline 3 DONE Headline 3 TODO Headline 4 DONE Headline 4 TODO Headline 5 DONE Headline 5 TODO Headline 6 DONE Headline 6 [A] Headline 1 [A] Headline 2 [A] Headline 3 [A] Headline 4 [A] Headline 5 [A] Headline 6 TODO [A] Headline 1 TODO [A] Headline 2 TODO [A] Headline 3 TODO [A] Headline 4 TODO [A] Headline 5 TODO [A] Headline 6 Headline 1 tags are supported  Headline 2 tags are supported  Headline 3 tags are supported  Headline 4 tags are supported  Headline 5 tags are supported  Headline 6 tags are supported  TODO [A] Headline 1 tags are supported  TODO [A] Headline 2 tags are supported  TODO [A] Headline 3 tags are supported  TODO [A] Headline 4 tags are supported  TODO [A] Headline 5 tags are supported  TODO [A] Headline 6 tags are supported  elements  unordered 1 2 lists are supported.</description>
     </item>
     
     <item>
       <title>Keep process running via Screen</title>
-      <link>http://kevinkwl.me/writing/linux-screen/</link>
+      <link>https://kevinkwl.github.io/writing/linux-screen/</link>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/writing/linux-screen/</guid>
+      
+      <guid>https://kevinkwl.github.io/writing/linux-screen/</guid>
       <description>Recently I&#39;ve been trying to train a neural network for machine translation (nematus) using the linux machine of the laboratory via ssh shell. But it keeps annoying me that each time I close the ssh connection, the training process terminates. As the training process is initiated from ssh shell, it is a child process that will be terminates when the parent process terminates (I exit the ssh shell).
 The recommended way is to use screen, which it can create processes in different process groups, thereby keep the processes running even if you disconnect from ssh session.</description>
     </item>
     
     <item>
       <title>A log(n) Algorithm for Fibonacci Numbers</title>
-      <link>http://kevinkwl.me/writing/faster-fibonacci/</link>
+      <link>https://kevinkwl.github.io/writing/faster-fibonacci/</link>
       <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/writing/faster-fibonacci/</guid>
+      
+      <guid>https://kevinkwl.github.io/writing/faster-fibonacci/</guid>
       <description>Explanation This algorithm is an exercise in the book Structure and Interpretation of Computer Programs (1.19).
 Original method The usual way of computing the fibonacci number is by using the definition of fibonacci numbers: \[ f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2) \] It&#39;s trivial to write a recursive procedure to calculate fibonacci numbers, but the cost grows exponentially. Using memorization techniques and dynamic programming, we can achieve a linear time complexity.</description>
     </item>

@@ -1,45 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notes on Wind&#39;s Howling</title>
-    <link>http://kevinkwl.me/category/notes/</link>
-    <description>Recent content in Notes on Wind&#39;s Howling</description>
+    <title>Notes on Kangwei Ling</title>
+    <link>https://kevinkwl.github.io/category/notes/</link>
+    <description>Recent content in Notes on Kangwei Ling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>lingkangwei.kevin@gmail.com (Kevin Ling)</managingEditor>
-    <webMaster>lingkangwei.kevin@gmail.com (Kevin Ling)</webMaster>
-    <copyright>Kevin Ling, kevinkwl</copyright>
     <lastBuildDate>Mon, 08 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://kevinkwl.me/category/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kevinkwl.github.io/category/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Learning Topic-Sensitive Word Representations</title>
-      <link>http://kevinkwl.me/writing/learn-topic-sensitive-word-representations/</link>
+      <link>https://kevinkwl.github.io/writing/learn-topic-sensitive-word-representations/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/writing/learn-topic-sensitive-word-representations/</guid>
+      
+      <guid>https://kevinkwl.github.io/writing/learn-topic-sensitive-word-representations/</guid>
       <description>Link to paper
 About Word Embedding The concept (or technique) of Word Embedding plays a crucial role in the recent Natural Language Processing field. Instead of high-dimensional (vocabulary size), extremely sparse (one-hot) vectors, smaller size (Most existing word embedding models (word2vec, glove, ...) only use one representation per word. Though these models have already achieved amazing results on many task, they fail to distinguish different meanings of polysemous words. For example, the word bank, has two distinct meanings which can only be inferred from the context.</description>
     </item>
     
     <item>
       <title>Keep process running via Screen</title>
-      <link>http://kevinkwl.me/writing/linux-screen/</link>
+      <link>https://kevinkwl.github.io/writing/linux-screen/</link>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/writing/linux-screen/</guid>
+      
+      <guid>https://kevinkwl.github.io/writing/linux-screen/</guid>
       <description>Recently I&#39;ve been trying to train a neural network for machine translation (nematus) using the linux machine of the laboratory via ssh shell. But it keeps annoying me that each time I close the ssh connection, the training process terminates. As the training process is initiated from ssh shell, it is a child process that will be terminates when the parent process terminates (I exit the ssh shell).
 The recommended way is to use screen, which it can create processes in different process groups, thereby keep the processes running even if you disconnect from ssh session.</description>
     </item>
     
     <item>
       <title>A log(n) Algorithm for Fibonacci Numbers</title>
-      <link>http://kevinkwl.me/writing/faster-fibonacci/</link>
+      <link>https://kevinkwl.github.io/writing/faster-fibonacci/</link>
       <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
-      <author>lingkangwei.kevin@gmail.com (Kevin Ling)</author>
-      <guid>http://kevinkwl.me/writing/faster-fibonacci/</guid>
+      
+      <guid>https://kevinkwl.github.io/writing/faster-fibonacci/</guid>
       <description>Explanation This algorithm is an exercise in the book Structure and Interpretation of Computer Programs (1.19).
 Original method The usual way of computing the fibonacci number is by using the definition of fibonacci numbers: \[ f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2) \] It&#39;s trivial to write a recursive procedure to calculate fibonacci numbers, but the cost grows exponentially. Using memorization techniques and dynamic programming, we can achieve a linear time complexity.</description>
     </item>
