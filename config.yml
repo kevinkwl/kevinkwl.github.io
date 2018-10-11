@@ -1,8 +1,8 @@
 ---
-baseURL: "http://kevinkwl.me/"
+baseURL: "https://kevinkwl.github.io/"
 disablePathToLower: true
 languageCode: en-us
-title: "Wind's Howling"
+title: "Kangwei Ling"
 pluralizelisttitles: "false"
 footnoteReturnLinkContents: "^"
 
